@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import AppDownload from '../../components/AppDownload/AppDownload';
 import Menu from '../../components/ExploreMenu/Menu';
 import { FoodDisplay } from '../../components/FoodDisplay/FoodDisplay';
 import Header from '../../components/Header/Header';
@@ -10,10 +9,9 @@ const Home = () => {
   const [category,setCategory]=useState("All");
   return (
     <div>
-
     <Menu category={category} setCategory={setCategory}/>
     <FoodDisplay category={category} />
-    <AppDownload/>
+   
     </div>
   )
 }

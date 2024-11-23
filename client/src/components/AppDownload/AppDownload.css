@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     gap:max(2vw,10px);
-    margin-top: 40px;
+   
 }
 
     .app-download-platform img{
