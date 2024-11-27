@@ -4,7 +4,7 @@ import { StoreContext } from '../../context/StoreContext';
 import './Cart.css';
 
 const Cart = () => {
-  const { cartItems, removeFromCart, food_list,getTotalCartAmount} = useContext(StoreContext);
+  const { cartItems, removeFromCart, foodItems,getTotalCartAmount} = useContext(StoreContext);
 const navigate=useNavigate();
   return (
     <div className="cart">
@@ -19,13 +19,13 @@ const navigate=useNavigate();
         </div>
         <hr />
         <br />
-        {food_list.map((item, index) => {
+        {foodItems.map((item, index) => {
           if (cartItems[item._id] > 0) {
             return (
               <div className="cart-items-item" key={item._id}>
-                <img src={item.image} alt={item.name} />
-                <p>{item.name}</p>
-                <p>${item.price}</p>
+                <img src={item.FoodImage} alt={item.foodName} />
+                <p>{item.foodName}</p>
+                <p>${item.FoodPrice}</p>
                 <p>{cartItems[item._id]}</p>
                 <p>${item.price * cartItems[item._id]}</p>
                 <p className='cross' onClick={() => removeFromCart(item._id)}>x</p>

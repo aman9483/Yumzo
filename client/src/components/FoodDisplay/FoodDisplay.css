@@ -1,17 +1,29 @@
-.food-display{
-    margin-top: 30px;
-
-}
-.food-display h2{
-    font-size: max(2vw,24px);
-    font-weight: 600;
-
-}
-.food-display-list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
-    gap: 30px;
-    margin-top: 30px;
-    row-gap: 50px;
-
-}
+.food-display {
+    padding: 10px;
+  }
+  
+  .food-display-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* This adds spacing between the food cards */
+    justify-content: space-between;
+  }
+  
+  .food-item {
+    flex: 1 1 calc(33.33% - 20px); /* Adjusts the width of each item, you can tweak the percentage */
+    margin-bottom: 20px; /* Adds spacing between rows */
+    box-sizing: border-box;
+  }
+  
+  @media (max-width: 768px) {
+    .food-item {
+      flex: 1 1 calc(50% - 20px); /* Adjust for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .food-item {
+      flex: 1 1 100%; /* Stacks items on very small screens */
+    }
+  }
+  

@@ -27,7 +27,9 @@ mongoose.connect(process.env.Mongo_url)
     .catch(error => console.error('Database Connection Error:', error));
 
 const userRoute = require('./Routes/UserRoute');
+const FoodRoute = require('./Routes/FoodRoute')
 
 app.use('/api/v1', userRoute);
+app.use('/api/v1', FoodRoute);
 
 

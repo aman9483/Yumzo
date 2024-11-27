@@ -9,6 +9,7 @@
     overflow: hidden;
     position: relative;
     cursor: pointer;
+   
 }
 
 .food-item:hover {
